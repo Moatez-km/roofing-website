@@ -33,13 +33,14 @@ export default function App() {
       {/* Hero & Navigation Wrapper */}
       <div className="relative min-h-screen flex flex-col">
         {/* Background Image with Gradient Overlay */}
-        <div 
-          className="absolute inset-0 z-0 bg-cover bg-no-repeat"
-          style={{
-            backgroundImage: 'url("/roof-bg.png")',
-            backgroundPosition: '90% 60%',
-          }}
-        >
+        <div className="absolute inset-0 z-0 overflow-hidden">
+          <div 
+            className="absolute inset-0 bg-cover bg-no-repeat opacity-70"
+            style={{
+              backgroundImage: 'url("/roof-bg.png")',
+              backgroundPosition: '90% 60%',
+            }}
+          />
           <div className="absolute inset-0 bg-gradient-to-r from-[#0d131a] via-[#0d131a]/70 to-transparent"></div>
           <div className="absolute inset-0 bg-gradient-to-t from-[#0d131a] via-[#0d131a]/60 to-transparent"></div>
           <div className="absolute inset-0 bg-black/10"></div>
