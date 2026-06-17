@@ -7,7 +7,7 @@ interface NavbarProps {
 
 export function Navbar({ onCallClick }: NavbarProps) {
   return (
-    <nav className="relative z-10 flex items-center justify-between px-8 py-4 bg-black/40 backdrop-blur-sm border-b border-white/5">
+    <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-8 py-4 bg-black/60 backdrop-blur-md border-b border-white/5">
       {/* Logo */}
       <div className="flex items-center gap-2">
         <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-white">
