@@ -167,7 +167,7 @@ export default function App() {
         {/* Call Button */}
         <a 
           href="tel:(555) 123-4567" 
-          className="w-12 h-12 bg-[#e2a92b] hover:bg-[#c99520] text-black rounded-full flex items-center justify-center shadow-lg transition-transform hover:scale-110 duration-200"
+          className="w-12 h-12 bg-orange-500 hover:bg-orange-600 text-white rounded-full flex items-center justify-center shadow-lg transition-transform hover:scale-110 duration-200"
           aria-label="Telefonanruf"
         >
           <Phone className="w-5 h-5 stroke-[2.5]" />
