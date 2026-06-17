@@ -108,10 +108,13 @@ export default function App() {
               <CalendarDays className="w-5 h-5" />
               KOSTENLOSES ANGEBOT
             </button>
-            <button className="flex items-center justify-center gap-3 bg-transparent border-2 border-white hover:bg-white/10 text-white px-8 py-4 font-bold text-sm tracking-wide transition-colors rounded-sm">
-              <Play className="w-5 h-5 fill-current" />
-              VIDEO ANSEHEN
-            </button>
+            <a 
+              href="tel:(555) 123-4567" 
+              className="flex items-center justify-center gap-3 bg-transparent border-2 border-white hover:bg-white/10 text-white px-8 py-4 font-bold text-sm tracking-wide transition-colors rounded-sm no-underline"
+            >
+              <Phone className="w-5 h-5" />
+              SOFORT ANRUFEN
+            </a>
           </div>
         </div>
       </main>
