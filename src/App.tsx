@@ -9,16 +9,17 @@ import {
 
 export default function App() {
   return (
-    <div className="min-h-screen font-sans text-white bg-[#1a1a1a] flex flex-col relative">
-      {/* Background Image with Gradient Overlay */}
+    <div className="min-h-screen font-sans text-white bg-[#0d131a] flex flex-col relative">
       <div 
-        className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
+        className="absolute inset-0 z-0 bg-cover bg-no-repeat"
         style={{
           backgroundImage: 'url("/roof-bg.jpg")',
+          backgroundPosition: 'right 5% top',
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0d131a] via-[#0d131a]/80 to-transparent"></div>
-        <div className="absolute inset-0 bg-black/20"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0d131a] via-[#0d131a]/70 to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0d131a] via-[#0d131a]/30 to-transparent"></div>
+        <div className="absolute inset-0 bg-black/10"></div>
       </div>
 
       {/* Navigation */}
