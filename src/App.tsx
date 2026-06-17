@@ -14,7 +14,7 @@ export default function App() {
       <div 
         className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: 'url("https://images.unsplash.com/photo-1613541444699-39429d990353?q=80&w=2070&auto=format&fit=crop")',
+          backgroundImage: 'url("/roof-bg.jpg")',
         }}
       >
         <div className="absolute inset-0 bg-gradient-to-r from-[#0d131a] via-[#0d131a]/80 to-transparent"></div>
