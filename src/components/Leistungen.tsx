@@ -28,7 +28,7 @@ export function Leistungen() {
   };
 
   return (
-    <section id="leistungen" className="relative z-10 py-24 px-8 lg:px-24 bg-[#0a0f14] border-t border-white/5">
+    <section id="leistungen" className="relative z-10 py-16 sm:py-24 px-5 sm:px-8 lg:px-24 bg-[#0a0f14] border-t border-white/5">
       {/* Background Subtle Gradient Glow */}
       <div className="absolute top-1/4 right-0 w-96 h-96 bg-orange-500/5 rounded-full blur-3xl pointer-events-none"></div>
       <div className="absolute bottom-1/4 left-0 w-96 h-96 bg-[#25D366]/5 rounded-full blur-3xl pointer-events-none"></div>
@@ -39,7 +39,7 @@ export function Leistungen() {
           <span className="text-orange-500 text-sm font-extrabold uppercase tracking-widest mb-3 block">
             Unsere Leistungen
           </span>
-          <h2 className="text-4xl md:text-5xl font-black text-white leading-tight mb-6 max-w-2xl">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white leading-tight mb-6 max-w-2xl">
             Alles rund ums Dach <br />
             <span className="text-orange-500">aus einer Hand</span>
           </h2>
@@ -233,7 +233,7 @@ export function Leistungen() {
         {/* Subsection: Vorher & Nachher */}
         <div className="border-t border-white/5 pt-16 mb-24">
           {/* Header */}
-          <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-12">
+          <div className="flex flex-col gap-4 mb-12">
             <div>
               <div className="flex items-center gap-2 mb-3">
                 <div className="w-8 h-[2px] bg-orange-500"></div>
@@ -241,7 +241,7 @@ export function Leistungen() {
                   SEHEN STATT VERSPRECHEN
                 </span>
               </div>
-              <h3 className="text-4xl md:text-5xl font-black text-white leading-tight">
+              <h3 className="text-3xl sm:text-4xl md:text-5xl font-black text-white leading-tight">
                 Vorher & Nachher
               </h3>
             </div>
@@ -255,7 +255,7 @@ export function Leistungen() {
             onPointerDown={handlePointerDown}
             onPointerMove={handlePointerMove}
             onPointerUp={handlePointerUp}
-            className="relative w-full aspect-[16/10] md:aspect-[16/9] max-w-5xl mx-auto overflow-hidden rounded-2xl border border-white/5 shadow-2xl select-none cursor-ew-resize touch-none"
+            className="relative w-full aspect-[4/3] sm:aspect-[16/10] md:aspect-[16/9] max-w-5xl mx-auto overflow-hidden rounded-2xl border border-white/5 shadow-2xl select-none cursor-ew-resize touch-none"
           >
             {/* Nachher Image (Right side underneath) */}
             <img 
@@ -297,7 +297,7 @@ export function Leistungen() {
 
         {/* Subsection: Dachrinnen Materialien */}
         <div className="border-t border-white/5 pt-16">
-          <h3 className="text-2xl font-bold text-white mb-2 text-center">
+          <h3 className="text-xl sm:text-2xl font-bold text-white mb-2 text-center">
             Dachrinnen Materialien
           </h3>
           <p className="text-sm text-gray-400 text-center mb-10 max-w-xl mx-auto">

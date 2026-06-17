@@ -2,17 +2,17 @@ import React from 'react';
 
 export function Ablauf() {
   return (
-    <section id="ablauf" className="relative z-10 py-24 px-8 lg:px-24 bg-[#0d131a] border-t border-white/5 overflow-hidden">
+    <section id="ablauf" className="relative z-10 py-16 sm:py-24 px-5 sm:px-8 lg:px-24 bg-[#0d131a] border-t border-white/5 overflow-hidden">
       {/* Background Subtle Gradient Glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-orange-500/5 rounded-full blur-3xl pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto">
         {/* Header */}
-        <div className="text-center mb-24">
+        <div className="text-center mb-16 sm:mb-24">
           <span className="text-orange-500 text-sm font-extrabold uppercase tracking-widest mb-3 block">
             Der Ablauf
           </span>
-          <h2 className="text-4xl md:text-5xl font-black text-white leading-tight mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white leading-tight mb-4">
             Wie es funktioniert
           </h2>
           <p className="text-lg text-gray-400 max-w-2xl mx-auto leading-relaxed">

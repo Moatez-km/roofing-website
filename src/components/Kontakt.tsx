@@ -3,12 +3,12 @@ import { Phone, Mail, MapPin, Clock } from 'lucide-react';
 
 export function Kontakt() {
   return (
-    <section id="kontakt" className="relative z-10 py-24 px-8 lg:px-24 bg-[#0d131a] border-t border-white/5 overflow-hidden">
+    <section id="kontakt" className="relative z-10 py-16 sm:py-24 px-5 sm:px-8 lg:px-24 bg-[#0d131a] border-t border-white/5 overflow-hidden">
       {/* Background Subtle Gradient Glow */}
       <div className="absolute top-1/3 left-0 w-[500px] h-[500px] bg-orange-500/5 rounded-full blur-3xl pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
           
           {/* Info Left */}
           <div>
@@ -18,7 +18,7 @@ export function Kontakt() {
                 KONTAKT
               </span>
             </div>
-            <h2 className="text-4xl md:text-5xl font-black text-white leading-tight mb-6">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white leading-tight mb-6">
               Kostenloses Angebot <br />
               anfordern
             </h2>

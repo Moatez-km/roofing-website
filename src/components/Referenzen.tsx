@@ -2,7 +2,7 @@ import React from 'react';
 
 export function Referenzen() {
   return (
-    <section id="referenzen" className="relative z-10 py-24 px-8 lg:px-24 bg-[#0a0f14] border-t border-white/5 overflow-hidden">
+    <section id="referenzen" className="relative z-10 py-16 sm:py-24 px-5 sm:px-8 lg:px-24 bg-[#0a0f14] border-t border-white/5 overflow-hidden">
       {/* Background Subtle Gradient Glow */}
       <div className="absolute bottom-1/4 right-0 w-[400px] h-[400px] bg-orange-500/5 rounded-full blur-3xl pointer-events-none"></div>
 
@@ -16,7 +16,7 @@ export function Referenzen() {
                 REFERENZEN
               </span>
             </div>
-            <h3 className="text-4xl md:text-5xl font-black text-white leading-tight">
+            <h3 className="text-3xl sm:text-4xl md:text-5xl font-black text-white leading-tight">
               Unsere Arbeit <br />
               spricht für sich
             </h3>
@@ -29,7 +29,7 @@ export function Referenzen() {
         {/* Project Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           {/* Left large project */}
-          <div className="lg:col-span-2 relative group overflow-hidden rounded-2xl border border-white/5 shadow-xl aspect-[16/10] lg:aspect-auto lg:h-[600px]">
+          <div className="lg:col-span-2 relative group overflow-hidden rounded-2xl border border-white/5 shadow-xl aspect-[4/3] sm:aspect-[16/10] lg:aspect-auto lg:h-[500px]">
             <img 
               src="/ref_steildach.png" 
               alt="Neueindeckung Steildach" 
@@ -43,9 +43,9 @@ export function Referenzen() {
           </div>
 
           {/* Right stacked projects */}
-          <div className="flex flex-col gap-6 lg:h-[600px]">
+          <div className="flex flex-col gap-6 lg:h-[500px]">
             {/* Top right project */}
-            <div className="flex-1 relative group overflow-hidden rounded-2xl border border-white/5 shadow-xl min-h-[250px]">
+            <div className="flex-1 relative group overflow-hidden rounded-2xl border border-white/5 shadow-xl min-h-[200px] sm:min-h-[250px]">
               <img 
                 src="/ref_detail.png" 
                 alt="Detailarbeiten" 
@@ -58,7 +58,7 @@ export function Referenzen() {
             </div>
 
             {/* Bottom right project */}
-            <div className="flex-1 relative group overflow-hidden rounded-2xl border border-white/5 shadow-xl min-h-[250px]">
+            <div className="flex-1 relative group overflow-hidden rounded-2xl border border-white/5 shadow-xl min-h-[200px] sm:min-h-[250px]">
               <img 
                 src="/ref_sanierung.png" 
                 alt="Dachsanierung" 
@@ -83,7 +83,7 @@ export function Referenzen() {
                   EINSATZGEBIET
                 </span>
               </div>
-              <h3 className="text-4xl md:text-5xl font-black text-white leading-tight mb-6">
+              <h3 className="text-3xl sm:text-4xl md:text-5xl font-black text-white leading-tight mb-6">
                 Erfurt & die ganze <br />
                 Region
               </h3>
@@ -105,7 +105,7 @@ export function Referenzen() {
             </div>
 
             {/* Map Right */}
-            <div className="w-full h-[400px] rounded-2xl border border-white/5 shadow-2xl overflow-hidden relative">
+            <div className="w-full h-[300px] sm:h-[400px] rounded-2xl border border-white/5 shadow-2xl overflow-hidden relative">
               <iframe 
                 src="https://maps.google.com/maps?q=Lothar%20Herrmann%20Dachdeckermeister%20Erfurt&t=&z=12&ie=UTF8&iwloc=&output=embed"
                 className="absolute inset-0 w-full h-full border-0"
