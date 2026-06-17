@@ -1,0 +1,6 @@
+{
+  "name": "Peak Roofing Landing Page",
+  "description": "A single-screen hero landing page for a roofing company featuring a dark theme, orange accents, and a background image.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
