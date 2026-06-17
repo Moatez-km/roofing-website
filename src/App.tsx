@@ -13,8 +13,8 @@ export default function App() {
       <div 
         className="absolute inset-0 z-0 bg-cover bg-no-repeat"
         style={{
-          backgroundImage: 'url("/roof-bg.jpg")',
-          backgroundPosition: 'right 5% top',
+          backgroundImage: 'url("/roof-bg.png")',
+          backgroundPosition: '90% 60%',
         }}
       >
         <div className="absolute inset-0 bg-gradient-to-r from-[#0d131a] via-[#0d131a]/70 to-transparent"></div>
