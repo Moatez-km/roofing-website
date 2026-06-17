@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import {
   Award,
   CalendarDays,
@@ -21,11 +21,35 @@ import {
 export default function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [copied, setCopied] = useState(false);
+  const [sliderPosition, setSliderPosition] = useState(50);
+  const [isDragging, setIsDragging] = useState(false);
 
   const handleCopy = () => {
     navigator.clipboard.writeText('0176 16239375');
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
+  };
+
+  const handlePointerDown = (e: React.PointerEvent<HTMLDivElement>) => {
+    e.currentTarget.setPointerCapture(e.pointerId);
+    setIsDragging(true);
+    const container = e.currentTarget.getBoundingClientRect();
+    const x = e.clientX - container.left;
+    const percentage = Math.max(0, Math.min(100, (x / container.width) * 100));
+    setSliderPosition(percentage);
+  };
+
+  const handlePointerMove = (e: React.PointerEvent<HTMLDivElement>) => {
+    if (!isDragging) return;
+    const container = e.currentTarget.getBoundingClientRect();
+    const x = e.clientX - container.left;
+    const percentage = Math.max(0, Math.min(100, (x / container.width) * 100));
+    setSliderPosition(percentage);
+  };
+
+  const handlePointerUp = (e: React.PointerEvent<HTMLDivElement>) => {
+    e.currentTarget.releasePointerCapture(e.pointerId);
+    setIsDragging(false);
   };
 
   return (
@@ -346,6 +370,71 @@ export default function App() {
                   <span>Pfostensetzen & Verankerung</span>
                 </li>
               </ul>
+            </div>
+          </div>
+
+          {/* Subsection: Vorher & Nachher */}
+          <div className="border-t border-white/5 pt-16 mb-24">
+            {/* Header */}
+            <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-12">
+              <div>
+                <div className="flex items-center gap-2 mb-3">
+                  <div className="w-8 h-[2px] bg-orange-500"></div>
+                  <span className="text-orange-500 text-xs font-extrabold uppercase tracking-widest">
+                    SEHEN STATT VERSPRECHEN
+                  </span>
+                </div>
+                <h3 className="text-4xl md:text-5xl font-black text-white leading-tight">
+                  Vorher & Nachher
+                </h3>
+              </div>
+              <p className="text-sm text-gray-400 max-w-md leading-relaxed">
+                Ziehen Sie den Regler – so sieht der Unterschied bei einer fachgerechten Sanierung aus.
+              </p>
+            </div>
+
+            {/* Slider Container */}
+            <div 
+              onPointerDown={handlePointerDown}
+              onPointerMove={handlePointerMove}
+              onPointerUp={handlePointerUp}
+              className="relative w-full aspect-[16/10] md:aspect-[16/9] max-w-5xl mx-auto overflow-hidden rounded-2xl border border-white/5 shadow-2xl select-none cursor-ew-resize touch-none"
+            >
+              {/* Nachher Image (Right side underneath) */}
+              <img 
+                src="/nachher.webp" 
+                alt="Nachher" 
+                className="absolute inset-0 w-full h-full object-cover pointer-events-none" 
+              />
+              
+              {/* Vorher Image (Left side clipped overlay) */}
+              <img 
+                src="/vorher.png" 
+                alt="Vorher" 
+                className="absolute inset-0 w-full h-full object-cover pointer-events-none" 
+                style={{ clipPath: `polygon(0 0, ${sliderPosition}% 0, ${sliderPosition}% 100%, 0 100%)` }}
+              />
+
+              {/* Labels */}
+              <span className="absolute top-6 left-6 z-20 px-3.5 py-1.5 bg-black/60 backdrop-blur-sm text-white text-xs font-bold uppercase tracking-wider rounded-full border border-white/5 pointer-events-none">
+                VORHER
+              </span>
+              <span className="absolute top-6 right-6 z-20 px-3.5 py-1.5 bg-black/60 backdrop-blur-sm text-yellow-500 text-xs font-bold uppercase tracking-wider rounded-full border border-white/5 pointer-events-none">
+                NACHHER
+              </span>
+
+              {/* Slider Divider Line */}
+              <div 
+                className="absolute top-0 bottom-0 w-1 bg-yellow-500 z-10 pointer-events-none"
+                style={{ left: `${sliderPosition}%` }}
+              >
+                {/* Drag Handle Circle */}
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 bg-yellow-500 rounded-full shadow-2xl flex items-center justify-center pointer-events-none transition-all duration-150">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" className="text-black">
+                    <path d="M8 7l-5 5 5 5M16 7l5 5-5 5" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                </div>
+              </div>
             </div>
           </div>
 
