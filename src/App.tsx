@@ -41,9 +41,8 @@ export default function App() {
               backgroundPosition: '90% 60%',
             }}
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#0d131a] via-[#0d131a]/70 to-transparent"></div>
-          <div className="absolute inset-0 bg-gradient-to-t from-[#0d131a] via-[#0d131a]/60 to-transparent"></div>
-          <div className="absolute inset-0 bg-black/10"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-[#0d131a] via-[#0d131a]/40 to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-[#0d131a] via-[#0d131a]/30 to-transparent"></div>
         </div>
 
         {/* Navigation */}
