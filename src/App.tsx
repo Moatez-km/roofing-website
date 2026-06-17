@@ -715,6 +715,52 @@ export default function App() {
               </div>
             </div>
           </div>
+
+          {/* Subsection: Einsatzgebiet */}
+          <div className="border-t border-white/5 pt-20 mt-20">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              {/* Info Left */}
+              <div>
+                <div className="flex items-center gap-2 mb-3">
+                  <div className="w-8 h-[2px] bg-orange-500"></div>
+                  <span className="text-orange-500 text-xs font-extrabold uppercase tracking-widest">
+                    EINSATZGEBIET
+                  </span>
+                </div>
+                <h3 className="text-4xl md:text-5xl font-black text-white leading-tight mb-6">
+                  Erfurt & die ganze <br />
+                  Region
+                </h3>
+                <p className="text-base text-gray-400 leading-relaxed mb-8">
+                  Wir sind in Erfurt zuhause und ständig in ganz Thüringen unterwegs. Ihr Ort nicht dabei? Fragen Sie einfach an.
+                </p>
+
+                {/* Cities Grid */}
+                <div className="flex flex-wrap gap-3">
+                  {['Erfurt', 'Weimar', 'Gotha', 'Arnstadt', 'Sömmerda', 'Apolda', 'Jena', 'Mühlhausen'].map((city) => (
+                    <span 
+                      key={city}
+                      className="px-4 py-2 text-sm text-gray-300 font-medium rounded-full bg-black/40 border border-white/10 backdrop-blur-sm shadow-sm select-none"
+                    >
+                      {city}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              {/* Map Right */}
+              <div className="w-full h-[400px] rounded-2xl border border-white/5 shadow-2xl overflow-hidden relative">
+                <iframe 
+                  src="https://maps.google.com/maps?q=Lothar%20Herrmann%20Dachdeckermeister%20Erfurt&t=&z=12&ie=UTF8&iwloc=&output=embed"
+                  className="absolute inset-0 w-full h-full border-0"
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Einsatzgebiet Karte"
+                ></iframe>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
