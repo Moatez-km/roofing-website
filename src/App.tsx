@@ -1,6 +1,7 @@
 import {
   Award,
   CalendarDays,
+  Check,
   Clock,
   Phone,
   Play,
@@ -23,7 +24,7 @@ export default function App() {
       </div>
 
       {/* Navigation */}
-      <nav className="relative z-10 flex items-center justify-between px-8 py-4 bg-black/40 backdrop-blur-sm border-b border-white/5">
+      <nav className="relative z-10 flex items-center justify-between px-8 py-3 bg-black/40 backdrop-blur-sm border-b border-white/5">
         {/* Logo */}
         <div className="flex items-center gap-2">
           {/* Custom SVG Logo resembling the one in the image */}
@@ -71,18 +72,18 @@ export default function App() {
       </nav>
 
       {/* Hero Content */}
-      <main className="relative z-10 flex-1 flex flex-col justify-center px-8 lg:px-24 py-16">
+      <main className="relative z-10 flex-1 flex flex-col justify-center px-8 lg:px-24 py-6 md:py-8">
         <div className="max-w-2xl">
-          <h1 className="text-6xl md:text-7xl lg:text-[5rem] font-black leading-[1.05] tracking-tight mb-6">
+          <h1 className="text-5xl md:text-6xl lg:text-[4.5rem] font-black leading-[1.05] tracking-tight mb-4">
             <span className="block text-white">STARKE DÄCHER.</span>
             <span className="block text-orange-500">SICHERE HÄUSER.</span>
           </h1>
           
-          <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-xl font-medium">
+          <p className="text-lg md:text-xl text-gray-300 mb-6 max-w-xl font-medium">
             Hochwertige Dachlösungen, gebaut um das zu schützen, was am wichtigsten ist.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-8 mb-12">
+          <div className="flex flex-col sm:flex-row gap-6 mb-8">
             <div className="flex items-center gap-4">
               <ShieldCheck className="w-10 h-10 text-orange-500" strokeWidth={1.5} />
               <div className="text-sm font-bold leading-snug">
@@ -118,6 +119,36 @@ export default function App() {
           </div>
         </div>
       </main>
+
+      {/* Bottom Features Banner */}
+      <footer className="relative z-10 w-full px-8 lg:px-24 py-4 mt-auto border-t border-white/5 bg-black/15 backdrop-blur-[2px] flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4">
+        <div className="flex flex-wrap gap-3 max-w-5xl">
+          <div className="flex items-center gap-2 bg-black/40 border border-white/10 rounded-full px-5 py-2.5 text-sm font-medium backdrop-blur-sm">
+            <Check className="w-4 h-4 text-orange-500 stroke-[3]" />
+            <span>Persönliches Angebot kostenlos</span>
+          </div>
+          <div className="flex items-center gap-2 bg-black/40 border border-white/10 rounded-full px-5 py-2.5 text-sm font-medium backdrop-blur-sm">
+            <Check className="w-4 h-4 text-orange-500 stroke-[3]" />
+            <span>7 Tage die Woche erreichbar</span>
+          </div>
+          <div className="flex items-center gap-2 bg-black/40 border border-white/10 rounded-full px-5 py-2.5 text-sm font-medium backdrop-blur-sm">
+            <Check className="w-4 h-4 text-orange-500 stroke-[3]" />
+            <span>Asbest-Entsorgung</span>
+          </div>
+          <div className="flex items-center gap-2 bg-black/40 border border-white/10 rounded-full px-5 py-2.5 text-sm font-medium backdrop-blur-sm">
+            <Check className="w-4 h-4 text-orange-500 stroke-[3]" />
+            <span>Immer unterwegs für Sie</span>
+          </div>
+        </div>
+
+        {/* Scroll Indicator */}
+        <div className="hidden lg:flex flex-col items-center gap-1.5 self-end">
+          <div className="w-5 h-8 border-2 border-white/20 rounded-full flex justify-center pt-1">
+            <div className="w-1 h-2 bg-orange-500 rounded-full animate-bounce"></div>
+          </div>
+          <span className="text-[0.6rem] tracking-[0.2em] font-bold text-gray-400">SCROLLEN</span>
+        </div>
+      </footer>
     </div>
   );
 }
