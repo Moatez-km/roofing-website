@@ -84,6 +84,11 @@ export function Navbar({ onCallClick }: NavbarProps) {
           {/* CTA button – hidden on very small, shown from sm */}
           <a
             href="#kontakt"
+            onClick={(e) => {
+              e.preventDefault();
+              const el = document.querySelector('#kontakt');
+              if (el) el.scrollIntoView({ behavior: 'smooth' });
+            }}
             className="hidden sm:block bg-orange-500 hover:bg-orange-600 text-white px-4 sm:px-6 py-2.5 sm:py-3 font-bold text-xs sm:text-sm tracking-wide transition-colors whitespace-nowrap"
           >
             KOSTENLOSES ANGEBOT
@@ -129,7 +134,10 @@ export function Navbar({ onCallClick }: NavbarProps) {
           {/* CTA (mobile menu) */}
           <a
             href="#kontakt"
-            onClick={() => setMenuOpen(false)}
+            onClick={(e) => {
+              e.preventDefault();
+              handleNavClick('#kontakt');
+            }}
             className="mt-6 w-full bg-orange-500 hover:bg-orange-600 text-white text-center px-6 py-4 font-bold text-sm tracking-wide transition-colors"
           >
             KOSTENLOSES ANGEBOT

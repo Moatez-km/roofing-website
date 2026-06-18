@@ -42,6 +42,11 @@ export function Hero({ onCallClick }: HeroProps) {
         <div className="flex flex-col xs:flex-row gap-4 sm:gap-6">
           <a
             href="#kontakt"
+            onClick={(e) => {
+              e.preventDefault();
+              const el = document.querySelector('#kontakt');
+              if (el) el.scrollIntoView({ behavior: 'smooth' });
+            }}
             className="flex items-center justify-center gap-3 bg-orange-500 hover:bg-orange-600 text-white px-6 sm:px-8 py-4 font-bold text-sm tracking-wide transition-colors rounded-sm"
           >
             <CalendarDays className="w-5 h-5" />
